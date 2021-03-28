@@ -1,5 +1,11 @@
+import Layout from "./components/Layout";
+
 const App = () => {
-    return <div>App</div>
+  return (
+    <Layout>
+      <div>Landing page for monster dexes</div>
+    </Layout>
+  );
 };
 
 export default App;
