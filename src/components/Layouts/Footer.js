@@ -1,12 +1,18 @@
+import { FooterContainer, FooterLogos } from "./index.styled";
+
 const Footer = () => {
   return (
-    <footer>
+    <FooterContainer>
       <nav>
         <p>Pokemon site</p>
         <p>Digimon site</p>
         <p>Other sites</p>
       </nav>
-    </footer>
+      <FooterLogos>
+        <img alt="pokemon logo"/>
+        <img alt="digimon logo"/>
+      </FooterLogos>
+    </FooterContainer>
   );
 };
 

@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
+import {
+  MonsterAddButton,
+  MonstersContainer,
+  MonsterLink,
+} from "./index.styled";
 
 const MonsterList = ({ monsters, resource }) => {
   return (
-    <div>
+    <MonstersContainer resource={resource}>
       <Link to={`/${resource}s/add`}>
-        <button>+Add new</button>
+        <MonsterAddButton>+Add new</MonsterAddButton>
       </Link>
       {monsters.map((monster) => (
         <Link key={monster.id} to={`/${resource}s/${monster.id}`}>
-          {monster.name}
+          <MonsterLink>{monster.name}</MonsterLink>
         </Link>
       ))}
-    </div>
+    </MonstersContainer>
   );
 };
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import Loading from "../Loading";
+import { Button, MonsterButtonContainer, MonsterDescription, MonstersContainer, MonsterTitle } from "./index.styled";
 
 const MonsterDetails = ({ resource, readMonsterDetails }) => {
   const params = useParams();
@@ -16,16 +17,18 @@ const MonsterDetails = ({ resource, readMonsterDetails }) => {
   }
 
   return (
-    <div>
-      <h3>Name: {monster.name}</h3>
-      <p>Description: {monster.description}</p>
-      <Link to={`/${resource}s/edit/${monster.id}`}>
-        <button>Update</button>
-      </Link>
-      <Link to={`/${resource}s/delete/${monster.id}`}>
-        <button>Delete</button>
-      </Link>
-    </div>
+    <MonstersContainer>
+      <MonsterTitle>{monster.name}</MonsterTitle>
+      <MonsterDescription>{monster.description}</MonsterDescription>
+      <MonsterButtonContainer>
+        <Link to={`/${resource}s/edit/${monster.id}`}>
+          <Button type="update">Update</Button>
+        </Link>
+        <Link to={`/${resource}s/delete/${monster.id}`}>
+          <Button type="delete">Delete</Button>
+        </Link>
+      </MonsterButtonContainer>
+    </MonstersContainer>
   );
 };
 

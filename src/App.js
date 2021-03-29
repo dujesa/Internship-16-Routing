@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import Layout from "./components/Layouts/Layout";
 import NotFound from "./components/NotFound";
+import Landing from "./components/Landing";
 import Pokemons from "./components/Pokemons";
 import Digimons from "./components/Digimons";
 
@@ -11,7 +12,7 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <div>Landing page</div>
+            <Landing />
           </Route>
           <Route path="/pokemons">
             <Pokemons />

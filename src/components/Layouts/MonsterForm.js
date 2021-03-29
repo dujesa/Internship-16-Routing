@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { MonsterSubmitButton, MonstersContainer, MonsterFormLabel, MonsterFormInput, MonsterFormTextarea } from "./index.styled";
 
 const MonsterForm = ({ onSubmit, monster }) => {
   const [name, setName] = useState("");
@@ -26,13 +27,13 @@ const MonsterForm = ({ onSubmit, monster }) => {
   };
 
   return (
-    <div>
-      <label>Name</label>
-      <input value={name} onChange={handleChange(setName)} />
-      <label>Description</label>
-      <input value={description} onChange={handleChange(setDescription)} />
-      <button onClick={handleSubmit}>Submit</button>
-    </div>
+    <MonstersContainer>
+      <MonsterFormLabel>Name</MonsterFormLabel>
+      <MonsterFormInput value={name} onChange={handleChange(setName)} />
+      <MonsterFormLabel>Description</MonsterFormLabel>
+      <MonsterFormTextarea value={description} onChange={handleChange(setDescription)}/>
+      <MonsterSubmitButton onClick={handleSubmit}>Submit</MonsterSubmitButton>
+    </MonstersContainer>
   );
 };
 

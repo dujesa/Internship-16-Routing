@@ -1,12 +1,24 @@
+import { Link } from "react-router-dom";
+import {
+  HeaderContainer,
+  HeaderNavigation,
+  HeaderTitle,
+  NavigationParagraph,
+} from "./index.styled";
+
 const Header = () => {
   return (
-    <header>
-      <h1>Monster dexes</h1>
-      <nav>
-        <p>Pokedex</p>
-        <p>Digidex</p>
-      </nav>
-    </header>
+    <HeaderContainer>
+      <HeaderTitle><a href="/">Monster dexes</a></HeaderTitle>
+      <HeaderNavigation>
+        <NavigationParagraph>
+          <a href="/pokemons">Pokedex</a>
+        </NavigationParagraph>
+        <NavigationParagraph>
+          <a href="/digimons">Digidex</a>
+        </NavigationParagraph>
+      </HeaderNavigation>
+    </HeaderContainer>
   );
 };
 
