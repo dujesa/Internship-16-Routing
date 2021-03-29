@@ -10,6 +10,9 @@ const App = () => {
     <Layout>
       <BrowserRouter>
         <Switch>
+          <Route exact path="/">
+            <div>Landing page</div>
+          </Route>
           <Route path="/pokemons">
             <Pokemons />
           </Route>

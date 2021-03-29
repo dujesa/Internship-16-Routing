@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router";
 import PokemonAdd from "./PokemonAdd";
+import PokemonDelete from "./PokemonDelete";
 import PokemonDetails from "./PokemonDetails";
 import PokemonEdit from "./PokemonEdit";
 import PokemonList from "./PokemonList";
@@ -18,6 +19,9 @@ const Pokemons = () => {
       </Route>
       <Route exact path="/pokemons/edit/:id">
         <PokemonEdit />
+      </Route>
+      <Route exact path="/pokemons/delete/:id">
+        <PokemonDelete />
       </Route>
     </Switch>
   );

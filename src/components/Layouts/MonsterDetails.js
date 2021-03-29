@@ -22,6 +22,9 @@ const MonsterDetails = ({ resource, readMonsterDetails }) => {
       <Link to={`/${resource}s/edit/${monster.id}`}>
         <button>Update</button>
       </Link>
+      <Link to={`/${resource}s/delete/${monster.id}`}>
+        <button>Delete</button>
+      </Link>
     </div>
   );
 };

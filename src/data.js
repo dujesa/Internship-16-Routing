@@ -24,11 +24,10 @@ export const updatePokemon = (pokemon) =>
     },
   }).then((response) => response.json());
 
-export const deletePokemon = (id) => {
+export const deletePokemon = (id) =>
   fetch(`http://localhost:5000/pokemons/${id}`, {
     method: "DELETE",
   }).then((response) => response.json());
-};
 
 export const readDigimons = () =>
   fetch("http://localhost:5000/digimons").then((response) => response.json());
@@ -56,8 +55,7 @@ export const updateDigimon = (digimon) =>
     },
   }).then((response) => response.json());
 
-export const deleteDigimon = (id) => {
+export const deleteDigimon = (id) =>
   fetch(`http://localhost:5000/digimons/${id}`, {
     method: "DELETE",
   }).then((response) => response.json());
-};

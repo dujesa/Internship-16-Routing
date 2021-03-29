@@ -28,11 +28,6 @@
       "description": "Botamon is a Slime Digimon. It was just born recently, and on the surface of its slime-shaped body, it has grown thick, black fuzz. It is unable to battle as it has just been born."
     },
     {
-      "id": 2,
-      "name": "Garurumon",
-      "description": "NaN"
-    },
-    {
       "id": 3,
       "name": "Agumon",
       "description": "Agumon is much like his partner in that he can be kind and compassionate, but he is more serious than Tai. Though he can act rashly, Agumon is more cautious and less prone to getting into sticky situations, though he follows and protects his partner all the way. He can get philosophical at times as well, as he manages to help BlackWarGreymon question his purpose, and even maintains a strong bond with his dark twin. Agumon also shares Tai's main trait of being incredibly courageous."
@@ -56,11 +51,6 @@
       "name": "Gabumon",
       "description": "Gabumon is at times shy and obedient, not willing to openly help unless those precious to him are harmed. He is utterly devoted to Matt, aiding him on his journey of self discovery, even if it brings him against the rest of the DigiDestined. ",
       "id": 7
-    },
-    {
-      "name": "Tsunomon",
-      "description": "Small digimon",
-      "id": 8
     }
   ]
 }

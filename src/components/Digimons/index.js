@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router";
 import DigimonAdd from "./DigimonAdd";
+import DigimonDelete from "./DigimonDelete";
 import DigimonDetails from "./DigimonDetails";
 import DigimonEdit from "./DigimonEdit";
 import DigimonList from "./DigimonList";
@@ -18,6 +19,9 @@ const Digimons = () => {
       </Route>
       <Route exact path="/digimons/edit/:id">
         <DigimonEdit />
+      </Route>
+      <Route exact path="/digimons/delete/:id">
+        <DigimonDelete />
       </Route>
     </Switch>
   );

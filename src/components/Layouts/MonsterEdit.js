@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Redirect, useParams } from "react-router";
 
-import { updateDigimon, updatePokemon } from "../../data";
 import MonsterForm from "./MonsterForm";
 import Loading from "../Loading";
 
