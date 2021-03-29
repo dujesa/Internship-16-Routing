@@ -1,14 +1,21 @@
+import { useEffect, useState } from "react";
+import { readDigimons } from "../../data";
+
+import Loading from "../Loading";
 import MonsterList from "./../Layouts/MonsterList";
 
 const DigimonList = () => {
-  const digimons = [
-    { id: 1, name: "Bulbasor", description: "Nan" },
-    { id: 2, name: "Pikachu", description: "Nan2" },
-    { id: 3, name: "Primploop", description: "Nan3" },
-    { id: 4, name: "Venosour", description: "Nan4" },
-  ];
+  const [digimons, setDigimons] = useState(null);
 
-  return <MonsterList monsters={digimons} />;
+  useEffect(() => {
+    readDigimons().then(setDigimons);
+  }, []);
+
+  if (!digimons) {
+    return <Loading />;
+  }
+
+  return <MonsterList monsters={digimons} resource="digimon" />;
 };
 
 export default DigimonList;

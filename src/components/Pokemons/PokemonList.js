@@ -1,16 +1,21 @@
+import { useEffect, useState } from "react";
+
+import { readPokemons } from "./../../data";
 import MonsterList from "./../Layouts/MonsterList";
+import Loading from "./../Loading";
 
 const PokemonList = () => {
-  const pokemons = [
-    { id: 1, name: "Bulbasor", description: "Nan" },
-    { id: 2, name: "Pikachu", description: "Nan2" },
-    { id: 3, name: "Primploop", description: "Nan3" },
-    { id: 4, name: "Venosour", description: "Nan4" },
-  ];
+  const [pokemons, setPokemons] = useState(null);
 
-  return (
-      <MonsterList monsters={pokemons} />
-  );
+  useEffect(() => {
+    readPokemons().then(setPokemons);
+  }, []);
+
+  if (!pokemons) {
+    return <Loading />;
+  }
+
+  return <MonsterList monsters={pokemons} resource="pokemon" />;
 };
 
 export default PokemonList;

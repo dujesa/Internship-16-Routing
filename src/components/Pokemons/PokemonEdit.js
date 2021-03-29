@@ -1,14 +1,24 @@
-import { updatePokemon } from "../../data";
-import MonsterForm from "../Layouts/MonsterForm";
+import { useState } from "react";
+
+import { readPokemonDetails, updatePokemon } from "../../data";
+import MonsterEdit from "../Layouts/MonsterEdit";
 
 const PokemonEdit = () => {
-  const pokemon = { name: "Bulbasor", description: "Nan" };
+  const [pokemon, setPokemon] = useState(null);
 
-  const handleUpdatePokemon = (pokemon) => {
-    updatePokemon(pokemon);
+  const handleUpdatePokemon = (monster) => {
+    return updatePokemon(monster).then(
+      (updatedPokemon) => !!Object.keys(updatedPokemon).length
+    );
   };
 
-  return <MonsterForm monster={pokemon} onSubmit={handleUpdatePokemon} />;
+  return (
+    <MonsterEdit
+      readMonsterDetails={readPokemonDetails}
+      updateMonster={handleUpdatePokemon}
+      redirectRoute="/pokemons"
+    />
+  );
 };
 
 export default PokemonEdit;

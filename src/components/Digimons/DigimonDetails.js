@@ -1,9 +1,8 @@
+import { readDigimonDetails } from "../../data";
 import MonsterDetails from "./../Layouts/MonsterDetails";
 
 const DigimonDetails = () => {
-  const digimon = { name: "Bulbasor", description: "Nan" };
-
-  return <MonsterDetails monster={digimon} />;
+  return <MonsterDetails readMonsterDetails={readDigimonDetails} resource="digimon"/>;
 };
 
 export default DigimonDetails;

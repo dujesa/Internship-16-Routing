@@ -16,7 +16,7 @@ export const createPokemon = (pokemon) =>
   }).then((response) => response.json());
 
 export const updatePokemon = (pokemon) =>
-  fetch("http://localhost:5000/pokemons", {
+  fetch(`http://localhost:5000/pokemons/${pokemon.id}`, {
     method: "PUT",
     body: JSON.stringify(pokemon),
     headers: {
@@ -48,7 +48,7 @@ export const createDigimon = (digimon) =>
   }).then((response) => response.json());
 
 export const updateDigimon = (digimon) =>
-  fetch("http://localhost:5000/digimons", {
+  fetch(`http://localhost:5000/digimons/${digimon.id}`, {
     method: "PUT",
     body: JSON.stringify(digimon),
     headers: {

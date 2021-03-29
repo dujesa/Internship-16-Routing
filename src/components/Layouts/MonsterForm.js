@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MonsterForm = ({ onSubmit, monster }) => {
-  const [name, setName] = useState(monster?.name || "");
-  const [description, setDescription] = useState(monster?.description || "");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+
+  useEffect(() => {
+    setName(monster?.name || "");
+    setDescription(monster?.description || "");
+  }, [monster]);
 
   const handleChange = (handler) => (event) => {
     handler(event.target.value);

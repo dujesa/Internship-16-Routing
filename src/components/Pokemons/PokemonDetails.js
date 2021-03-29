@@ -1,9 +1,13 @@
+import { readPokemonDetails } from "../../data";
 import MonsterDetails from "./../Layouts/MonsterDetails";
 
 const PokemonDetails = () => {
-  const pokemon = { name: "Bulbasor", description: "Nan" };
-
-  return <MonsterDetails monster={pokemon} />;
+  return (
+    <MonsterDetails
+      readMonsterDetails={readPokemonDetails}
+      resource="pokemon"
+    />
+  );
 };
 
 export default PokemonDetails;
